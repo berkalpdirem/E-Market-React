@@ -1,0 +1,40 @@
+/* NavBar.module.css */
+
+.navbar {
+  height: 60px;
+  background-color: #2d3436; /* Mavi renk kullanabilirsiniz */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  padding: 0 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.cartButton {
+  background-color: #e74c3c; /* Kırmızı renk kullanabilirsiniz */
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cartButton:hover {
+  background-color: #c0392b; /* Koyu kırmızı renk kullanabilirsiniz */
+}
