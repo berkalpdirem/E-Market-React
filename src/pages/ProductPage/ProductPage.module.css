@@ -8,16 +8,7 @@
   flex-direction: column; /* Yatay hizalama yerine dikey hizalama ekledik */
 }
 
-.div {
-  z-index: 1;
-}
-
-.slider {
-  background-color: yellow;
-  z-index: 1;
-}
-
-.Products {
+.products {
   background-color: #636e72;
   width: 100%; /* Genişlik 100% olarak değiştirildi */
   padding: 20px; /* Padding eklendi */

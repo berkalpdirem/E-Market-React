@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import styles from "./HomePage.module.css";
-import ProductList from "../../components/ListProducts/ListProducts";
+import ListProducts from "../../components/ListProducts/ListProducts";
 import { ApiContext } from "../../contex/ApiContext";
 
 export function HomePage() {
-  const { topProducts } = useContext(ApiContext);
+  const { products } = useContext(ApiContext);
 
   return (
     <>
@@ -16,9 +16,8 @@ export function HomePage() {
         {/* Slider */}
         <div className={styles.slider}>Buraya Slider Gelecek</div>
         {/* ProductLists */}
-        <div className={styles.topProducts}>
-          {/* ProductList bileşenine products prop'u ile veriyi iletiyoruz */}
-          <ProductList topProducts={topProducts} />
+        <div className={styles.Products}>
+          <ListProducts products={products} isHighRated={true} rate={4.5} />
         </div>
       </div>
     </>

@@ -1,19 +1,25 @@
+// ListProducts.jsx
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard.jsx";
 import styles from "./ListProducts.module.css";
-const ListProducts = ({ topProducts }) => {
-  const highRatedProducts = topProducts.filter(
-    (product) => product.rating >= 4.5
-  );
+
+const ListProducts = ({ products, isHighRated, rate }) => {
+  const filteredProducts = isHighRated
+    ? products.filter((product) => product.rating >= rate)
+    : products;
 
   return (
     <div className={styles.topProductsContainer}>
-      {topProducts.length > 0 ? (
-        highRatedProducts.map((topProduct) => (
-          <ProductCard key={topProduct.id} {...topProduct} />
+      {filteredProducts.length > 0 ? (
+        filteredProducts.map((product) => (
+          <ProductCard key={product.id} {...product} />
         ))
       ) : (
-        <p>Ürün Bulunamadı !!!</p>
+        <p>
+          {isHighRated
+            ? `${rate} üzeri dereceye sahip ürünler yükleniyor...`
+            : "Ürünler yükleniyor..."}
+        </p>
       )}
     </div>
   );
