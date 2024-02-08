@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import styles from "./ProductCard.module.css";
 import { CartContext } from "../../context/CartContext.jsx";
-//-------------------------++++++++product
+
 const ProductCard = (product) => {
   const [quantity, setQuantity] = useState(0);
   const { findProduct, addToCart, removeFromCart } = useContext(CartContext);

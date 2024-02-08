@@ -1,30 +1,110 @@
-.overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(
-    255,
-    0,
-    0,
-    0.5
-  ); /* Kırmızı arka plan rengi, istediğin renk değeriyle değiştirilebilir */
+/* Cart.module.css */
+.allPanel {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  z-index: 1000;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.warning {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ff6666;
+  margin-top: 30vh;
+  line-height: 1.5;
+  text-align: center;
+}
+.cartContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
 }
 
-.cartPanel {
-  background-color: #fff;
-  padding: 20px;
-  width: 300px; /* Panelin genişliği, istediğin değerle değiştirilebilir */
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #ddd;
 }
 
-.closeButton {
-  background-color: #ccc;
+.cartItem img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.itemSummary {
+  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.price {
+  text-decoration: underline;
+}
+/* Güncellenen kısım sonu */
+
+.actionArea {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.actionArea button,
+.actionArea span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 20px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  padding: 8px;
+  padding: 0 10px;
   cursor: pointer;
+}
+
+.actionArea button:hover {
+  background-color: #0056b3;
+}
+
+/*----------------------------------------------*/
+.paymnetArea {
+  /* paymentArea için eklenen stil */
+  display: flex;
+  align-items: flex-end;
+  padding-top: 16px; /* Araya boşluk eklemek için padding-top */
+}
+
+.priceAndButton {
+  display: flex;
+  flex-direction: column;
+  padding-left: 60%;
+}
+
+.priceAndButton div {
+  font-size: 24px;
+}
+
+.priceAndButton button {
+  background-color: #28a745; /* Yeşil renk */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.priceAndButton button:hover {
+  background-color: #218838; /* Hover rengi */
 }
