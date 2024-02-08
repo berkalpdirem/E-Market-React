@@ -1,23 +1,26 @@
-// ProductCard.jsx
-
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import styles from "./ProductCard.module.css";
 import { CartContext } from "../../context/CartContext.jsx";
 
 const ProductCard = ({ id, title, description, thumbnail, price }) => {
   const [quantity, setQuantity] = useState(0);
-  const { cartItems, addToCart, removeFromCart } = useContext(CartContext);
+  const { findProduct, addToCart, removeFromCart } = useContext(CartContext);
+
+  useEffect(() => {
+    const existingItem = findProduct(id);
+    if (existingItem) {
+      setQuantity(existingItem.quantity);
+    } else {
+      setQuantity(0);
+    }
+  }, [findProduct, id]);
 
   const handleAddToCart = () => {
-    setQuantity((prevQuantity) => prevQuantity + 1);
     addToCart({ id, title, price });
   };
 
   const handleRemoveFromCart = () => {
-    if (quantity > 0) {
-      setQuantity((prevQuantity) => prevQuantity - 1);
-      removeFromCart(id);
-    }
+    removeFromCart(id);
   };
 
   return (
@@ -27,7 +30,7 @@ const ProductCard = ({ id, title, description, thumbnail, price }) => {
       <p>Açıklama: {description}</p>
       <p>Fiyat: {price} TL</p>
       <div className={styles.buttonContainer}>
-        {quantity !== 0 && (
+        {quantity > 0 && (
           <>
             <button onClick={handleRemoveFromCart}>-</button>
             <span className={styles.quantity}>Adet: {quantity}</span>

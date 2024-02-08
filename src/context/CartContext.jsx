@@ -6,6 +6,13 @@ export const CartContext = createContext();
 export const CartContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
+  const findProduct = (productId) => {
+    const existingItem = cartItems.find(
+      (item) => item.product.id === productId
+    );
+    return existingItem;
+  };
+
   const addToCart = (product) => {
     const existingItem = cartItems.find(
       (item) => item.product.id === product.id
@@ -23,7 +30,7 @@ export const CartContextProvider = ({ children }) => {
     } else {
       // Ürün zaten sepette yok ise yeni bir CartItem olusturup CardItems'e ekle
       const newCartItem = {
-        cartItemId: cartItems.length + 1, // Benzersiz Id olusturulması lazım !!!!!!!!!!!!!!
+        cartItemId: Math.floor(Math.random() * 1000000 + 1), // Benzersiz Id olusturulması lazım !!!!!!!!!!!!!!
         quantity: 1,
         product: product,
       };
@@ -61,7 +68,7 @@ export const CartContextProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart }}
+      value={{ cartItems, findProduct, addToCart, removeFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>
