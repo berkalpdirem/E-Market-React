@@ -8,6 +8,11 @@ const Cart = () => {
     useContext(CartContext);
 
   const isCartEmpty = cartItems.length === 0;
+
+  const totalAmount = cartItems.reduce(
+    (total, item) => total + item.quantity * item.product.price,
+    0
+  );
   return (
     <>
       <div className={styles.allPanel}>
@@ -39,7 +44,7 @@ const Cart = () => {
         {!isCartEmpty && (
           <div className={styles.paymnetArea}>
             <div className={styles.priceAndButton}>
-              <div>Toplam Fiyat:</div>
+              <div>Toplam Fiyat: {totalAmount}</div>
               <button onClick={clearCart}>Siparişi Ver</button>
             </div>
           </div>

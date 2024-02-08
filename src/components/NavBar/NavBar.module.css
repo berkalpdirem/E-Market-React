@@ -1,12 +1,15 @@
-/* NavBar.module.css */
-
 .navbar {
   height: 60px;
-  background-color: #2d3436; /* Mavi renk kullanabilirsiniz */
+  background-color: #2d3436;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .links {
@@ -18,23 +21,31 @@
   padding: 0 20px;
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 36px;
 }
 
 .link:hover {
   text-decoration: underline;
 }
 
+.cartIcon {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
 .cartButton {
-  background-color: #e74c3c; /* Kırmızı renk kullanabilirsiniz */
-  color: white;
+  display: flex;
+  align-items: center;
   padding: 10px 20px;
+  margin-right: 32px;
   font-size: 18px;
+  color: #636e72;
   border: none;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .cartButton:hover {
-  background-color: #c0392b; /* Koyu kırmızı renk kullanabilirsiniz */
+  background-color: #b2bec3;
 }

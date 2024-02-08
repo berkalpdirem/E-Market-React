@@ -90,7 +90,7 @@
 .priceAndButton {
   display: flex;
   flex-direction: column;
-  padding-left: 60%;
+  padding-left: 50%;
 }
 
 .priceAndButton div {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import CartPanelStyle from "../CartPanel/CartPanel.module.css";
 import CartPanel from "../CartPanel/CartPanel";
+import cartIcon from "../../assets/Cart.png";
 
 export function NavBar() {
   const [isCartPanelOpen, setCartPanelOpen] = useState(false);
@@ -27,12 +28,14 @@ export function NavBar() {
       </div>
 
       <div className={styles.cart}>
+        {/* İkona ilgili class'ı ekleyin */}
         <button className={styles.cartButton} onClick={openCartPanel}>
+          <img src={cartIcon} alt="Cart" className={styles.cartIcon} />
           Sepet
         </button>
       </div>
 
-      {/* CardPanel */}
+      {/* CartPanel */}
       {isCartPanelOpen && (
         <div className={CartPanelStyle.overlay}>
           <div className={CartPanelStyle.cartPanel}>

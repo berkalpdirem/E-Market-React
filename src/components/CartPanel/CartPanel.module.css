@@ -5,9 +5,18 @@
   right: 0;
   bottom: 0;
   left: 100%;
-  transition: left 0.3s ease-in-out;
+  transition: all 1s ease;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+}
+/* Panel açıldığında */
+.overlay.active {
+  left: 0;
+  transition: all 1s ease;
+}
+
+.cartPanel.active {
+  right: 0;
 }
 
 .cartPanel {
@@ -35,13 +44,4 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
-}
-
-/* Panel açıldığında */
-.overlay.active {
-  left: 0;
-}
-
-.cartPanel.active {
-  right: 0;
 }

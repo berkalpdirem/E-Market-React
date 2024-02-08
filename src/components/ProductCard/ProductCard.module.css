@@ -6,24 +6,42 @@
   border-radius: 8px;
   position: relative;
 }
-/* Car İçeriği Css'leri*/
+
+/* Card İçeriği Css'leri*/
 .productCard img {
   width: 100%;
   height: 200px;
   border-radius: 8px;
 }
+
 .productCard h3 {
   margin: 8px 0;
 }
-/*---- Sepet Butonlarının Css'leri*/
+
+/*---- Card Butonlarının Css'leri*/
 .buttonContainer {
   position: absolute;
   bottom: 8px;
   right: 8px;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.buttonContainer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 8px;
+}
+
+.buttonContainer button:hover {
+  background-color: #0056b3;
 }
 
 .quantity {
-  margin: 0 8px;
   font-size: 16px;
 }
