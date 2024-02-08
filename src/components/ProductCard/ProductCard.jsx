@@ -28,7 +28,7 @@ const ProductCard = (product) => {
       <img src={product.thumbnail} alt={product.title} />
       <h3>{product.title}</h3>
       <p>Açıklama: {product.description}</p>
-      <p>Fiyat: {product.price} TL</p>
+      <p>Fiyat: {product.price} $</p>
       <div className={styles.buttonContainer}>
         {quantity > 0 && (
           <>

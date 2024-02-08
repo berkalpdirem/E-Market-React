@@ -1,4 +1,3 @@
-// ListProducts.jsx
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard.jsx";
 import styles from "./ListProducts.module.css";

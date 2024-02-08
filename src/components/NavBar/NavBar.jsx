@@ -28,7 +28,6 @@ export function NavBar() {
       </div>
 
       <div className={styles.cart}>
-        {/* İkona ilgili class'ı ekleyin */}
         <button className={styles.cartButton} onClick={openCartPanel}>
           <img src={cartIcon} alt="Cart" className={styles.cartIcon} />
           Sepet

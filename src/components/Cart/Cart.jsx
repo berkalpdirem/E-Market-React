@@ -1,4 +1,3 @@
-// Cart.jsx
 import React, { useContext } from "react";
 import styles from "./Cart.module.css";
 import { CartContext } from "../../context/CartContext";
@@ -27,7 +26,7 @@ const Cart = () => {
                   {item.product.description}
                 </div>
                 <div className={styles.price}>
-                  Fiyat: {item.product.price} TL
+                  Fiyat: {item.product.price} $
                 </div>
               </div>
               <div className={styles.actionArea}>
@@ -44,7 +43,7 @@ const Cart = () => {
         {!isCartEmpty && (
           <div className={styles.paymnetArea}>
             <div className={styles.priceAndButton}>
-              <div>Toplam Fiyat: {totalAmount}</div>
+              <div>Toplam Fiyat: {totalAmount} $</div>
               <button onClick={clearCart}>Siparişi Ver</button>
             </div>
           </div>

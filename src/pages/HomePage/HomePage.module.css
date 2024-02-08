@@ -5,7 +5,7 @@
 
   display: flex;
   justify-content: center;
-  flex-direction: column; /* Yatay hizalama yerine dikey hizalama ekledik */
+  flex-direction: column;
 }
 
 .div {
@@ -19,9 +19,9 @@
 
 .Products {
   background-color: #636e72;
-  width: 100%; /* Genişlik 100% olarak değiştirildi */
-  padding: 20px; /* Padding eklendi */
-  box-sizing: border-box; /* Padding, genişlik ve yüksekliği içeriye dahil etmek için */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;

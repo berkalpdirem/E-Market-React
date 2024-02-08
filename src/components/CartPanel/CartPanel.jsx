@@ -1,4 +1,3 @@
-// CartPanel.jsx
 import React, { useState } from "react";
 import Cart from "../Cart/Cart.jsx";
 import styles from "./CartPanel.module.css";
