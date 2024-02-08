@@ -33,6 +33,7 @@ export const CartContextProvider = ({ children }) => {
         cartItemId: Math.floor(Math.random() * 1000000 + 1), // Benzersiz Id olusturulması lazım !!!!!!!!!!!!!!
         quantity: 1,
         product: product,
+        thumbnail: product.thumbnail,
       };
 
       setCartItems((prevItems) => [...prevItems, newCartItem]);
