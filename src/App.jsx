@@ -15,18 +15,17 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
-
-        <div>
-          <CartContextProvider>
+        <CartContextProvider>
+          <NavBar />
+          <div>
             <ApiContextProvider>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/products" element={<ProductPage />} />
               </Routes>
             </ApiContextProvider>
-          </CartContextProvider>
-        </div>
+          </div>
+        </CartContextProvider>
       </BrowserRouter>
     </>
   );

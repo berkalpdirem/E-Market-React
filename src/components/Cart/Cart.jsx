@@ -10,9 +10,12 @@ const Cart = () => {
     <div className={styles.cartContent}>
       {cartItems.map((item) => (
         <div key={item.id} className={styles.cartItem}>
-          <span>{item.title}</span>
-          <span>Fiyat: {item.price} TL</span>
-          <button onClick={() => removeFromCart(item)}>Ürünü Kaldır</button>
+          <span>Adet: {item.quantity}</span>
+          <span>{item.product.title}</span>
+          <span>Fiyat: {item.product.price} TL</span>
+          <button onClick={() => removeFromCart(item.product.id)}>
+            Ürünü Kaldır
+          </button>
         </div>
       ))}
     </div>
