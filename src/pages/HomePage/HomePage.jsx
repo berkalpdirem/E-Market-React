@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import styles from "./HomePage.module.css";
 import ListProducts from "../../components/ListProducts/ListProducts";
-import { ApiContext } from "../../contex/ApiContext";
+import { ApiContext } from "../../context/ApiContext";
 
 export function HomePage() {
   const { products } = useContext(ApiContext);

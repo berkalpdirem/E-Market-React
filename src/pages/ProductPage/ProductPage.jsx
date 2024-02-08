@@ -1,7 +1,7 @@
-import styles from "./ProductPage.module.css";
 import React, { useContext } from "react";
+import styles from "./ProductPage.module.css";
 import ProductList from "../../components/ListProducts/ListProducts.jsx";
-import { ApiContext } from "../../contex/ApiContext";
+import { ApiContext } from "../../context/ApiContext";
 
 export function ProductPage() {
   const { products } = useContext(ApiContext);

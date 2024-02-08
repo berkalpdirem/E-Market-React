@@ -1,0 +1,30 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(
+    255,
+    0,
+    0,
+    0.5
+  ); /* Kırmızı arka plan rengi, istediğin renk değeriyle değiştirilebilir */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.cartPanel {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px; /* Panelin genişliği, istediğin değerle değiştirilebilir */
+}
+
+.closeButton {
+  background-color: #ccc;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
