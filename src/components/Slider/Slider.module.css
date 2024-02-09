@@ -1,0 +1,45 @@
+/* Slider.module.css */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: #3498db;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+}
+
+.directionButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  background-color: rgba(52, 152, 219, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.directionButton:hover {
+  background-color: rgba(52, 152, 219, 0.8);
+}
+
+.directionButton:first-child {
+  left: 0;
+}
+
+.directionButton:last-child {
+  right: 0;
+}
