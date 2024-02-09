@@ -35,19 +35,21 @@ export function NavBar() {
       </div>
 
       {/* CartPanel */}
-      {isCartPanelOpen && (
-        <div className={CartPanelStyle.overlay}>
-          <div className={CartPanelStyle.cartPanel}>
-            <button
-              className={CartPanelStyle.closeButton}
-              onClick={closeCartPanel}
-            >
-              X
-            </button>
-            <CartPanel />
-          </div>
+      <div
+        className={`${CartPanelStyle.overlay} ${
+          isCartPanelOpen ? CartPanelStyle.active : ""
+        }`}
+      >
+        <div className={CartPanelStyle.cartPanel}>
+          <button
+            className={CartPanelStyle.closeButton}
+            onClick={closeCartPanel}
+          >
+            X
+          </button>
+          <CartPanel />
         </div>
-      )}
+      </div>
     </nav>
   );
 }

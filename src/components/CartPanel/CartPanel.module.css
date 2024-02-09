@@ -1,17 +1,16 @@
 .overlay {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
+  width: 500px;
   bottom: 0;
-  left: 100%;
   transition: all 1s ease;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 /* Panel açıldığında */
 .overlay.active {
-  left: 0;
-  transition: all 1s ease;
+  right: 0;
 }
 
 .cartPanel.active {
@@ -19,15 +18,14 @@
 }
 
 .cartPanel {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
   bottom: 0;
   width: 500px;
+  height: auto;
+  bottom: 0;
   background-color: #b2bec3;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  transition: right 0.3s ease-in-out;
-  overflow-y: auto;
 }
 
 .cartPanelContent {
