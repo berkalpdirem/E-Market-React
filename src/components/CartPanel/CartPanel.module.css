@@ -1,13 +1,17 @@
 .overlay {
   position: fixed;
-  top: 0;
-  right: -100%;
+  top: 60px;
   width: 500px;
-  bottom: 0;
+  right: -100%;
   transition: all 1s ease;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  overflow-y: auto;
+  max-height: 700px;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
+
 /* Panel açıldığında */
 .overlay.active {
   right: 0;
@@ -19,13 +23,15 @@
 
 .cartPanel {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 60px;
   width: 500px;
   height: auto;
-  bottom: 0;
   background-color: #b2bec3;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 700px;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
 
 .cartPanelContent {

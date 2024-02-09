@@ -48,11 +48,7 @@ const Cart = () => {
             </div>
           </div>
         )}
-        {isCartEmpty && (
-          <div className={styles.warning}>
-            Sepetiniz Boş Lütfen Sepetinizi Doldurunuz
-          </div>
-        )}
+        {isCartEmpty && <div className={styles.warning}>Sepetiniz Boş</div>}
       </div>
     </>
   );

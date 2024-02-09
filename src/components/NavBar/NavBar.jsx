@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import CartPanelStyle from "../CartPanel/CartPanel.module.css";
 import CartPanel from "../CartPanel/CartPanel";
 import cartIcon from "../../assets/Cart.png";
+import { CartContext } from "../../context/CartContext";
 
 export function NavBar() {
   const [isCartPanelOpen, setCartPanelOpen] = useState(false);
+  const { cartItems } = useContext(CartContext);
 
   const openCartPanel = () => {
     setCartPanelOpen(true);
@@ -15,6 +17,12 @@ export function NavBar() {
   const closeCartPanel = () => {
     setCartPanelOpen(false);
   };
+
+  // Sepetteki toplam ürün sayısını hesapla
+  const totalItemsInCart = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   return (
     <nav className={styles.navbar}>
@@ -30,7 +38,7 @@ export function NavBar() {
       <div className={styles.cart}>
         <button className={styles.cartButton} onClick={openCartPanel}>
           <img src={cartIcon} alt="Cart" className={styles.cartIcon} />
-          Sepet
+          Sepet ({totalItemsInCart} Ürün)
         </button>
       </div>
 
